@@ -1,0 +1,4 @@
+select * from pri_tel.tel_hb_labeled where engine_serial_number in( 76510554,78854267,76534931,82003218)
+ 
+df = spark.sql("select * from pri_tel.tel_hb_labeled where engine_serial_number = '76510554'")
+df.toPandas().to_csv("GPS_orror.csv", index=False)
